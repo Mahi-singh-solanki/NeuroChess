@@ -47,18 +47,7 @@ class SymbolicChessRules:
         Determine the current symbolic game state.
         """
 
-        if board.is_checkmate():
-            return "checkmate"
-
-        if board.is_stalemate():
-            return "stalemate"
-
-        if board.is_insufficient_material():
-            return "insufficient_material"
-
-        if board.is_check():
-            return "check"
-
+        #Fix me 3: Constraints
         return "playing"
 
     def get_state(self, board):

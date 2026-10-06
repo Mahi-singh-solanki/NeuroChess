@@ -35,31 +35,8 @@ class ChessEngine:
         # White maximizes evaluation
         if board.turn == chess.WHITE:
 
-            best_score = float("-inf")
-            best_move = None
-
-            for move in legal_moves:
-
-                new_board = board.copy()
-                new_board.push(move)
-
-                score, _ = self.minimax(
-                    new_board,
-                    depth - 1,
-                    alpha,
-                    beta
-                )
-
-                if score > best_score:
-                    best_score = score
-                    best_move = move
-
-                alpha = max(alpha, best_score)
-
-                if beta <= alpha:
-                    break
-
-            return best_score, best_move
+            #FIX ME 4:fINDING BEST FOR WHITE
+            pass
 
         # Black minimizes evaluation
         else:

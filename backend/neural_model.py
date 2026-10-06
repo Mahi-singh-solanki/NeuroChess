@@ -7,21 +7,8 @@ import torch.nn as nn
 class ChessEvaluator(nn.Module):
     def __init__(self):
         super().__init__()
-
-        self.network = nn.Sequential(
-            nn.Linear(69, 128),
-            nn.ReLU(),
-
-            nn.Dropout(0.15),
-
-            nn.Linear(128, 64),
-            nn.ReLU(),
-
-            nn.Dropout(0.10),
-
-            nn.Linear(64, 1),
-            nn.Tanh()
-        )
+        #Fix me 1
+        # Architecture
 
     def forward(self, x):
         return self.network(x)
@@ -51,14 +38,8 @@ class NeuralEvaluator:
 
         x = np.zeros(64, dtype=np.float32)
 
-        piece_values = {
-            chess.PAWN: 1,
-            chess.KNIGHT: 2,
-            chess.BISHOP: 3,
-            chess.ROOK: 4,
-            chess.QUEEN: 5,
-            chess.KING: 6
-        }
+        #fix me 2. Encoding
+        piece_values = {}
 
         for square, piece in board.piece_map().items():
 

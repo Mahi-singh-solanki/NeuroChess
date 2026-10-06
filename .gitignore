@@ -1,2 +1,5 @@
 __pycache__
 venv
+chess_engine2.py
+neural_model2.py
+symbolic_rules2.py
